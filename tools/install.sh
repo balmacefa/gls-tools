@@ -15,7 +15,7 @@
 latest_version='1.5.0'
 
 # Latest tarball url for gitpod.laravel-starter. Set via set_release_data()
-latest_tarball_url=
+latest_tarball_url='https://api.github.com/repos/apolopena/gitpod-laravel-starter/tarball/v1.5.0'
 
 # END: GLobals
 
@@ -73,10 +73,7 @@ set_release_data() {
   if ! url_exists "$url"; then echo "404 error at url: $url" && return 1; fi
   release_json="$(curl -fsSL "$url")"
 
-  # Parse and set globals
-  chunk="$(echo "$release_json" | grep 'tarball_url')"
-  latest_tarball_url="$(echo "$chunk" | grep -oE 'https.*"')"
-  latest_tarball_url="${latest_tarball_url::-1}"
+  latest_tarball_url="https://api.github.com/repos/apolopena/gitpod-laravel-starter/tarball/v1.5.0",
   latest_version="$(echo "$chunk" | grep -oE "$version_regex")"
 }
 

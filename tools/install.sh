@@ -25,8 +25,7 @@ url_exists() {
 }
 
 get_deps() {
-  local url url_root="https://raw.githubusercontent.com/apolopena/gls-tools/main/tools/lib"
-  url="$url_root/third-party/spinner.sh"
+  local url url="https://raw.githubusercontent.com/apolopena/gls-tools/main/tools/lib/spinner.sh"
   if url_exists "$url"; then
     # shellcheck source=/dev/null
     if ! source <(curl -fsSL "$url"); then echo "Unable to source $url"; return 1; fi

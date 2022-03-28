@@ -12,7 +12,7 @@
 # BEGIN: Globals
 
 # Latest version number for gitpod.laravel-starter. Set via set_release_data()
-latest_version='v1.5.0'
+latest_version='1.5.0'
 
 # Latest tarball url for gitpod.laravel-starter. Set via set_release_data()
 latest_tarball_url=
